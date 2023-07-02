@@ -11,23 +11,21 @@ class BaseModel(models.Model):
 
 class Order(BaseModel):
     STATUS_ORDER_CHOICES = (
-        ('new', 'New'),
-        ('in_process', 'In Process'),
-        ('stored', 'Stored'),
-        ('send', 'Send'),
+        ("new", "New"),
+        ("in_process", "In Process"),
+        ("stored", "Stored"),
+        ("send", "Send"),
     )
 
     order_number = models.CharField(max_length=255)
     status = models.CharField(
-        max_length=20,
-        choices=STATUS_ORDER_CHOICES,
-        default='new'
+        max_length=20, choices=STATUS_ORDER_CHOICES, default="new"
     )
 
     class Meta:
-        verbose_name = 'Order'
-        verbose_name_plural = 'Orders'
-        app_label = 'store'
+        verbose_name = "Order"
+        verbose_name_plural = "Orders"
+        app_label = "store"
 
     def __str__(self):
         return self.order_number

@@ -6,4 +6,7 @@ from apps.store.models import Order
 class OrderSerializer(serializers.ModelSerializer):
     class Meta:
         model = Order
-        fields = ['order_number', 'status', ]
+        fields = [
+            "order_number",
+            "status",
+        ]
