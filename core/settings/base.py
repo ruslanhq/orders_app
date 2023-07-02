@@ -127,5 +127,10 @@ STATIC_URL = "/static/"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
+# Apps URL
 STORE_URL = f'{os.environ.get("STORE_HOST")}:{os.environ.get("STORE_PORT")}'
 WAREHOUSE_URL = f'{os.environ.get("WAREHOUSE_HOST")}:{os.environ.get("WAREHOUSE_PORT")}'
+
+# API keys
+STORE_API_KEY = os.environ.get("STORE_API_KEY")
+WAREHOUSE_API_KEY = os.environ.get("WAREHOUSE_API_KEY")

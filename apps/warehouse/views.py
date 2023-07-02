@@ -5,9 +5,12 @@ from rest_framework.views import APIView
 
 from apps.warehouse.models import WarehouseOrder
 from apps.warehouse.serializers import WarehouseOrderSerializer
+from core.authentication import AuthToken
 
 
 class WarehouseOrderView(APIView):
+    authentication_classes = [AuthToken]
+
     def post(self, request, *args, **kwargs):
         serializer = WarehouseOrderSerializer(data=request.data)
         if serializer.is_valid():

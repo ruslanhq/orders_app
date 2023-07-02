@@ -5,9 +5,12 @@ from rest_framework.views import APIView
 
 from apps.store.models import Order
 from apps.store.serializers import OrderSerializer
+from core.authentication import AuthToken
 
 
 class OrderView(APIView):
+    authentication_classes = [AuthToken]
+
     def put(self, request, *args, **kwargs):
         if "id" not in request.data:
             return Response(
