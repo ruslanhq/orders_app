@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  store:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    entrypoint: /app/entrypoint_store_app.sh
+
+  warehouse:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8001:8001"
+    volumes:
+      - .:/app
+    entrypoint: /app/entrypoint_warehouse_app.sh
