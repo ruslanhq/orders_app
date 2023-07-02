@@ -126,3 +126,6 @@ STATIC_URL = "/static/"
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+STORE_URL = f'{os.environ.get("STORE_HOST")}:{os.environ.get("STORE_PORT")}'
+WAREHOUSE_URL = f'{os.environ.get("WAREHOUSE_HOST")}:{os.environ.get("WAREHOUSE_PORT")}'
