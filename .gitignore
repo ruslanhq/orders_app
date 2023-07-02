@@ -135,3 +135,6 @@ dmypy.json
 node_modules/
 package*.json
 .idea/
+
+# sqlite3
+*.db
