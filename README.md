@@ -21,7 +21,7 @@ To install and run this project, follow these steps:
 
 1. Clone the repository: 
 ```sh
-$ git clone git clone https://github.com/ruslanhq/orders_app.git
+$ git clone https://github.com/ruslanhq/orders_app.git
 $ cd orders_app
 ```
 2. Rename *.env.example* to *.env*:
